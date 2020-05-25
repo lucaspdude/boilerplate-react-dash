@@ -1,0 +1,75 @@
+// Image aspect ratio
+.img {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  &.aspectRatio--1x1 {
+    padding-top: calc((1 / 1) * 100%);
+  }
+  &.aspectRatio--4x3 {
+    padding-top: calc((3 / 4) * 100%);
+  }
+  &.aspectRatio--16x9 {
+    padding-top: calc((9.8 / 16) * 100%);
+  }
+  &.aspectRatio--9x11 {
+    padding-top: calc((11 / 9) * 100%);
+  }
+  &.aspectRatio--16x10 {
+    padding-top: calc((10.1 / 16) * 100%);
+  }
+  &.aspectRatio--59x75 {
+    padding-top: calc((75 / 59) * 100%);
+  }
+  &.aspectRatio--93x61 {
+    padding-top: calc((61 / 93) * 100%);
+  }
+  &.aspectRatio--93x70 {
+    padding-top: calc((70 / 93) * 100%);
+  }
+  &.aspectRatio--361x240 {
+    padding-top: calc((240 / 361) * 100%);
+  }
+  &.aspectRatio--349x360 {
+    padding-top: calc((360 / 349) * 100%);
+  }
+  &.aspectRatio--899x569 {
+    padding-top: calc((569 / 899) * 100%);
+  }
+  &.aspectRatio--596x405 {
+    padding-top: calc((405 / 596) * 100%);
+  }
+  &.aspectRatio--236x275 {
+    padding-top: calc((275 / 236) * 100%);
+  }
+  &.aspectRatio--87x115 {
+    padding-top: calc((115 / 87) * 100%);
+  }
+  &.aspectRatio--473x312 {
+    padding-top: calc((312 / 473) * 100%);
+  }
+  &.aspectRatio--953x627 {
+    padding-top: calc((627 / 953) * 100%);
+  }
+  &.aspectRatio--224x174 {
+    padding-top: calc((174 / 224) * 100%);
+  }
+  &.aspectRatio--323x217 {
+    padding-top: calc((217 / 323) * 100%);
+  }
+  &.aspectRatio--721x799 {
+    padding-top: calc((799 / 721) * 100%);
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: auto;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
+  &.aspectRatio--87x64 {
+    padding-top: calc((64 / 87) * 100%);
+  }
+}

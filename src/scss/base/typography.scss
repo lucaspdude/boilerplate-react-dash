@@ -1,0 +1,53 @@
+@mixin font-face($name, $file) {
+  @font-face {
+    font-family: "#{$name}";
+        src: url("../fonts/#{$file}.eot");
+        src: url("../fonts/#{$file}.eot?#iefix") format("embedded-opentype"),
+          url("../fonts/#{$file}.woff") format("woff"),
+          url("../fonts/#{$file}.ttf") format("truetype"),
+          url("../fonts/#{$file}.svg?#webfont") format("svg");
+      }
+    }
+ @include font-face("Gotham-Medium", "Gotham-Medium");
+ @include font-face("Gotham-Bold", "Gotham-Bold");
+ @include font-face("Gotham-Book", "Gotham-Book");
+ @include font-face("fontawesome-webfont", "fontawesome-webfont");
+
+ 
+$font-regular: "Gotham-Book", sans-serif;
+$font-medium: "Gotham-Medium", sans-serif;
+$font-bold: "Gotham-Bold", sans-serif;
+$font-black: "Gotham-Black", sans-serif;
+
+$font-awesome : "fontawesome-webfont";
+
+// Light 400
+// Roman 500
+// Medium 600
+// Bold 700
+// Black 900
+
+html,
+body {
+  font-size: 20px;
+  hyphens: none;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: $font-regular;
+  letter-spacing: 0.24px;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-black;
+  font-weight: 600;
+}

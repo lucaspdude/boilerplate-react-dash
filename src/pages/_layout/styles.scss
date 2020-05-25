@@ -1,0 +1,233 @@
+/*
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&display=swap');
+*{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 18px;
+    box-sizing: border-box;
+}
+
+$ketchapp-red: #C94646;
+$ketchapp-yellow: #FFC536;
+$white: #fff;
+$grey: #4C4C4C;
+$light-grey: #E0E0E0;
+$dark: #333333;
+$green: rgb(33, 179, 89);
+
+
+
+.wrapper-full-height{
+    height: 100%;
+}
+
+
+
+img.logo{
+    width: 200px;
+    transform: rotate(-10deg);
+}
+.bg-red-ketchapp{
+    background-color: $ketchapp-red;
+    color: $white;
+
+    a:link, a:visited{
+        color: $white;
+        font-size: 1.5rem;
+    }
+}
+.bg-dark-ketchapp{
+    background-color: $dark;
+    color: $white;
+}
+
+// Formulário LOGIN
+.form-ketchapp{
+    width: 60%;
+
+    input{
+        padding: 30px 10px;
+        font-size: 1.8rem;
+        margin: 10px 0px;
+        border-radius: 5px;
+        border: 0;
+        color: $grey;
+        background-color: $white;
+
+        &:focus{
+            outline: 1;
+            box-shadow: inset 0.5px 0.5px 5px 0.5px rgba($color: #000, $alpha: 0.3);
+        }
+    }
+}
+
+.btn-yellow{
+    background-color: $ketchapp-yellow;
+    padding: 25px 100px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    // width: 50%;
+    color: $white;
+    text-transform: uppercase;
+    box-shadow: -0.5px -0.5px 5px -0.5px rgba($color: #000, $alpha: 0.2);
+
+    &:hover{
+        transition: ease-in-out 0.3s;
+        color: $grey;
+        box-shadow: 0.5px 0.5px 10px 0.5px rgba($color: #000, $alpha: 0.3);
+    }
+
+}
+
+.btn-square{
+    border: 1px solid;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: transparent;
+
+    &:hover{
+        font-weight: 900;
+        transition: ease-in-out 0.3s;
+        color: $white;
+        box-shadow: 0.5px 0.5px 10px 0.5px rgba($color: #000, $alpha: 0.3);
+    }
+}
+.btn-white{
+    color: $white;
+    background-color: transparent;
+}
+
+
+
+
+.bg-img-loja{
+    background-image: url('../../assets/img/01.jpg');
+    background-size: cover;
+    background-position: center;
+    border-left: 10px solid $white;
+}
+
+
+
+
+// Conteúdo
+.content-container{
+    // margin-top: 145px;
+    overflow: auto;
+    padding-bottom: 50px;
+
+    .content-sidebar{
+        overflow-y: hidden;
+        padding-top: 10px;
+
+
+        .sidebar-menu{
+            padding: 10px 20px;
+            a:link, a:visited{
+                display: block;
+                font-size: 1rem;
+                padding: 15px 5px;
+                text-transform: uppercase;
+                border-bottom: 1px solid #fff;
+                color: $white;
+                font-weight: 700;
+
+                &:hover{
+                    text-decoration: none;
+                    transition: ease-in-out 0.3s;
+                    background-color: $grey;
+                }
+
+                &:last-child{
+                    border-bottom: none;
+                }
+            }
+        }
+
+
+    }
+    .content-pages{
+        overflow: auto !important;
+        color: $dark;
+        height: 100%;
+        background-color: $light-grey;
+        padding-top: 10px;
+        margin: 0 auto;
+
+
+
+        h1, h2, h3{
+            display: block;
+            font-weight: 700;
+            padding-bottom: 5px;
+        }
+
+
+
+
+
+
+
+
+
+        // CUSTOM PAGES ATTRIBUTES
+        .horario-form{
+            border: 1px solid $ketchapp-red;
+
+            .horario-form-item{
+                border: 1px solid $ketchapp-red;
+            }
+        }
+
+    }
+}
+
+
+
+
+// Admin Custom Cards
+.custom-card{
+    padding: 25px;
+    margin-top: 25px;
+    h3{
+        font-weight: 900;
+        font-size: 2rem;
+    }
+    h4{
+        font-weight: 700;
+    }
+}
+
+.dashboard-relatorio-item{
+
+    .dashboard-relatorio-titulo{
+
+    }
+    .dashboard-relatorio-conteudo{
+        font-size: 1.3rem;
+    }
+}
+
+
+
+
+.inactive{
+    background-color: rgba($color: rgb(238, 238, 238), $alpha: 1.0);
+}
+
+
+.produto-img-round{
+
+    border-radius: 50%;
+    object-fit: fill;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #C94646;
+    margin-right: 15px;
+    padding: 2px;
+
+
+}
+*/
+

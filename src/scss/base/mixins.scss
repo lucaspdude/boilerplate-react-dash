@@ -1,0 +1,134 @@
+//@mixins functions by Michel
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+//mixin that transform font-size to rem
+@mixin font-size($sizeValue: 16) {
+  $remSize: $sizeValue / 16;
+  font-size: #{$remSize}rem;
+}
+
+@mixin title() {
+  background: $blue2;
+  text-align: center;
+  padding: 16px 0 14px 0;
+  @include font(
+    $family: $font1,
+    $size: 14px,
+    $colour: #ffffff,
+    $weight: false,
+    $lh: false
+  );
+  text-transform: uppercase;
+  margin-bottom: 0;
+  margin-top: 0;
+  border-radius: 0;
+}
+
+@mixin responsive-ratio($x, $y, $pseudo: false) {
+  $padding: unquote(($y / $x) * 100 + "%");
+  @if $pseudo {
+    &:before {
+      @include pseudo($pos: relative);
+      width: 100%;
+      padding-top: $padding;
+    }
+  } @else {
+    padding-top: $padding;
+  }
+}
+
+@mixin break-word() {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+//define a font style
+@mixin font(
+  $family: false,
+  $size: false,
+  $colour: false,
+  $weight: false,
+  $lh: false
+) {
+  @if $family {
+    font-family: $family;
+  }
+  else {
+    font-family: "sans-serif";
+  }
+  @if $size {
+    font-size: $size;
+  }
+  @if $colour {
+    color: $colour;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}
+
+//define the style in all differents formats
+
+/* example @content use:
+input,  
+textarea {  
+  @include input-placeholder {
+      color: $grey;
+  }
+}
+*/
+
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+//You can use this mixin to provide a retina-ready background image for any HTML element.
+@mixin retina-image($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+    (-o-min-device-pixel-ratio: 2.6/2),
+    (-webkit-min-device-pixel-ratio: 1.3),
+    (min-device-pixel-ratio: 1.3),
+    (min-resolution: 1.3dppx) {
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
+@mixin background-image($image, $width, $height) {
+  background-image: url($path+$image);
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: $width + px;
+  height: $height + px;
+  content: "";
+  display: inline-block;
+  background-size: cover;
+}
+
+@mixin box-shadow-default() {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+}

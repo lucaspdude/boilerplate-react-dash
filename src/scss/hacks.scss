@@ -1,0 +1,15 @@
+/* ONLY EDGE HACKS */
+
+@supports (-ms-ime-align: auto) {
+}
+
+/* IE HACKS */
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+}
+
+/* iOS hacks */
+
+@supports (-webkit-overflow-scrolling: touch) {
+}

@@ -1,0 +1,102 @@
+$num_columns: 12;
+$gutter: 32px;
+
+
+
+$env: "development" !default;
+$path: "../images/" !default;
+
+@if ($env == "production") {
+  $path: "../img/";
+}
+
+//import bootstrap
+
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/root";
+@import "node_modules/bootstrap/scss/print";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+//@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/code";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/tables";
+@import "node_modules/bootstrap/scss/forms";
+@import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/utilities";
+
+//base application
+//@import "base/typography";
+@import "base/mixins";
+@import "base/animations";
+@import "base/styleguide";
+//@import "base/image-aspect-ratio";
+
+//components
+@import "components/buttons.scss";
+@import "components/header.scss";
+@import "components/footer.scss";
+@import "components/forms.scss";
+@import "components/cards.scss";
+@import "components/loading.scss";
+@import "components/modal.scss";
+
+
+//layouts
+
+
+// Usuários
+.funcoes-wrapper{
+  // border: 1px solid #000;
+  width: 100%;
+
+  .choice-funcoes{
+    margin: auto 10px;
+    width: 15px;
+    height: 15px;
+    padding: 15px;
+    
+  }
+  label{
+    margin-right: 10px;
+  }
+}
+
+.form-table-inline{
+  padding: 0px;
+  margin: 0px;
+  .form-inline-item-text{
+    margin-bottom: 0px;
+    height: 40px;
+    margin-top: 10px;
+  }
+  .btn{
+    height: 40px;
+    margin-top: 0px;
+    font-size: 16px;
+  }
+}
+
+
+.subcategoria-table-row{
+  font-weight: 100;
+  background-color: rgba($color: #addeff, $alpha: 0.3);
+  border-left: 5px solid #addeff;
+  margin-left: 5px; 
+}
+
+.mini-card-item{
+  background-color: rgba($color: #addeff, $alpha: 0.5);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 2px;
+  font-size: 10px;
+}
+
+.table-img-display{
+  height: 100px !important;
+  width: 100px !important;
+  object-fit: contain;
+}
